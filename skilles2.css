@@ -1,0 +1,298 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    min-height: 100vh;
+    background: url() no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #eee;
+    /* overflow: hidden; */
+}
+
+header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 20px 100px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo {
+    font-size: 2em;
+    user-select: none;
+    color: black;
+
+}
+
+.nav-igation a {
+    position: relative;
+    font-weight: 500;
+    font-size: 1.1em;
+    text-decoration: none;
+    margin-left: 40px;
+    color: black;
+}
+
+.nav-igation a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: black;
+    border-radius: 5px;
+    left: 0px;
+    bottom: -6px;
+
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.nav-igation a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+
+}
+
+.nav-igation .btn-login-popup {
+    border: 2px solid black;
+    width: 130px;
+    height: 50px;
+    border-radius: 7px;
+    background: black;
+    outline: none;
+    margin-left: 30px;
+    font-size: 1.1em;
+    font-weight: 500;
+    cursor: pointer;
+    color: #eee;
+    transition: .5s;
+}
+
+.nav-igation .btn-login-popup:hover {
+    background-color: #eee;
+    color: black;
+}
+
+.bars {
+    width: 130px;
+}
+
+.bars i {
+    border: 1px solid #d3cece;
+    border-radius: 10px;
+    width: 40px;
+    text-align: center;
+    background: transparent;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #d3cece;
+    background-color: black;
+    position: absolute;
+    top: 10px;
+    right: 2em;
+    transition: .3s;
+}
+
+.bars i:hover {
+    color: black;
+    background-color: #d3cece;
+    border: 1px solid #d3cece;
+}
+
+
+.worapp {
+    width: 340px;
+    height: 470px;
+    background-color: white;
+    padding: 10px;
+    position: relative;
+    top: 8em;
+    left: 6em;
+    border-radius: 6px;
+}
+
+.worapp .container h2 {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+
+.worapp .container span img {
+    width: 300px;
+    height: 190px;
+    overflow: hidden;
+    margin-top: 15px;
+    border-radius: 50px;
+    margin: 11px 10px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.worapp .container span:hover img {
+    transform: scale(1.1);
+    opacity: 0.8;
+
+}
+
+
+.worapp .container .main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.worapp .container .main .left {
+    flex: 1;
+    padding: 17px 0 0 5px;
+}
+
+.worapp .container .main .left p {
+    padding: 0 0 18px 0;
+}
+
+.worapp .container .main .left .age strong {
+    padding: 0 44% 0 0;
+}
+
+.worapp .container .main .left .loc strong {
+    padding: 0 21% 0 0;
+}
+
+.worapp .container .main .left .ex strong {
+    padding: 0 22% 0 0;
+}
+
+.worapp .container .main .left .de strong {
+    padding: 0 36% 0 0;
+}
+
+.worapp .container .main .left p strong {
+    padding-right: 32%;
+}
+
+
+
+.worapp .container .about-me {
+    width: 300%;
+    height: 470px;
+    border-radius: 6px;
+    background-color: white;
+    position: relative;
+    bottom: 450px;
+    left: 370px;
+}
+
+.worapp .container .about-me .conterr {
+    padding: 25px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.worapp .container .about-me .conterr h2 {
+    display: inline;
+    margin-left: 20px;
+    font-size: 2;
+}
+
+label {
+    font-weight: bold;
+}
+
+.box {
+    position: relative;
+    display: inline-block;
+    padding-left: 130px;
+    margin-bottom: 30px;
+    margin: 22px 0 81px 0;
+}
+
+.box .percent {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.box .percent svg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+
+.box .percent svg circle {
+    width: 150px;
+    height: 150px;
+    fill: none;
+    stroke: #000;
+    stroke-width: 10;
+    transform: translate(5px, 5px);
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    stroke-linecap: round;
+}
+
+.box .percent svg circle:nth-child(1) {
+    stroke-dasharray: 0;
+    stroke: #f3f3f3;
+}
+
+.box .percent svg .ci1 {
+    stroke-dashoffset: calc(440 - (440 * 87) / 100);
+    stroke: #03a9f4;
+}
+
+.box .percent svg .ci2 {
+    stroke-dashoffset: calc(440 - (440 * 17) / 100);
+    stroke: #03a9f4;
+}
+
+.box .percent svg .ci3 {
+    stroke-dashoffset: calc(440 - (440 * 30) / 100);
+    stroke: #03a9f4;
+}
+
+
+.box .percent .number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #999;
+}
+
+.box .percent .number h2 {
+    font-size: 48px;
+}
+
+.box .percent .number h2 span {
+    font-size: 24px;
+}
+
+.box .text {
+    padding: 10px 0 0;
+    columns: #999;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
